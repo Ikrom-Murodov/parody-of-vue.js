@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-param-reassign */
-import { ASTElement, compile } from 'vue-template-compiler';
+import { ASTElement } from 'vue-template-compiler';
 import { THChildren, IVNode, h } from 'virtual-dom-library';
+import getPropsFromAst from './getPropsFromAst';
 
 /**
  * This function transforms the ast element into a virtual node.
@@ -26,7 +28,7 @@ import { THChildren, IVNode, h } from 'virtual-dom-library';
  */
 export default function transformAstToVNode(
   ast: ASTElement,
-  data: { [key: string]: unknown },
+  data: { [key: string]: any },
 ): IVNode {
   const children: THChildren = [];
 
@@ -38,10 +40,11 @@ export default function transformAstToVNode(
     ast.children.forEach((child) => {
       if (child.type === 1) {
         const parentForChild: THChildren = [];
+        const props = getPropsFromAst(child, data);
 
         implementationTransformAstToVNode(child, parentForChild);
         parent.push(
-          h(child.tag as keyof HTMLElementTagNameMap, null, parentForChild),
+          h(child.tag as keyof HTMLElementTagNameMap, props, parentForChild),
         );
       } else if (child.type === 2) {
         child.text = child.text.replace(
@@ -55,6 +58,11 @@ export default function transformAstToVNode(
   }
 
   implementationTransformAstToVNode(ast, children);
-  const virtualNode = h(ast.tag as keyof HTMLElementTagNameMap, null, children);
+  const props = getPropsFromAst(ast, data);
+  const virtualNode = h(
+    ast.tag as keyof HTMLElementTagNameMap,
+    props,
+    children,
+  );
   return virtualNode;
 }
