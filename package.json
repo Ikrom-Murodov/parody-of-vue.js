@@ -1,7 +1,7 @@
 {
   "name": "parody-of-vue.js",
-  "version": "0.0.0",
-  "description": "Siple parody of vue.js",
+  "version": "1.0.0",
+  "description": "Simple parody of vue.js",
   "main": "src/ts/index.js",
   "scripts": {
     "dev": "node -r esm webpack/dev.js",
@@ -15,11 +15,12 @@
     "email": "ikrommurodov2001@gmail.com",
     "url": "https://github.com/Ikrom-Murodov"
   },
-  "homepage": "https://github.com/Ikrom-Murodov",
+  "homepage": "https://github.com/Ikrom-Murodov/parody-of-vue.js",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-typescript": "^7.10.4",
     "@types/expect-puppeteer": "^4.4.5",
@@ -65,6 +66,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "core-js": "3"
+    "core-js": "3",
+    "proxy-handler-for-reactivity": "^1.0.0",
+    "virtual-dom-library": "^1.0.0",
+    "vue-template-compiler": "^2.6.12"
   }
 }
