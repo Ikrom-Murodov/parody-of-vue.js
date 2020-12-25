@@ -30,7 +30,7 @@ interface IReactiveFunction {
   (...args: any[]): TAll;
 }
 // eslint-disable-next-line
-class SimpleParodyOfVue<
+export default class SimpleParodyOfVue<
   TData extends { [key: string]: any },
   TMethods extends {
     [key: string]: (
