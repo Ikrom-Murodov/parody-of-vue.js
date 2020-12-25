@@ -66,6 +66,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "core-js": "3",
+    "proxy-handler-for-reactivity": "^1.0.0",
     "virtual-dom-library": "^1.0.0",
     "vue-template-compiler": "^2.6.12"
   }

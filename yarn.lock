@@ -8660,6 +8660,11 @@ proxy-addr@~2.0.5:
     forwarded "~0.1.2"
     ipaddr.js "1.9.1"
 
+proxy-handler-for-reactivity@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/proxy-handler-for-reactivity/-/proxy-handler-for-reactivity-1.0.0.tgz#cffe4d160051189404600d5f9cf62b53b4a69821"
+  integrity sha512-dzN6t+7HmdZIckDw8qMO24AGtHwKwMHbU0GMp07Ks9TSP97PCOlf8VJRhlN3ZrEWKcq+ky4vkz7FfkasV89sTw==
+
 prr@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
