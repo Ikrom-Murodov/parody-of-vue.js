@@ -1,7 +1,7 @@
 {
   "name": "parody-of-vue.js",
-  "version": "0.0.0",
-  "description": "Siple parody of vue.js",
+  "version": "1.0.0",
+  "description": "Simple parody of vue.js",
   "main": "src/ts/index.js",
   "scripts": {
     "dev": "node -r esm webpack/dev.js",
@@ -15,7 +15,7 @@
     "email": "ikrommurodov2001@gmail.com",
     "url": "https://github.com/Ikrom-Murodov"
   },
-  "homepage": "https://github.com/Ikrom-Murodov",
+  "homepage": "https://github.com/Ikrom-Murodov/parody-of-vue.js",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
